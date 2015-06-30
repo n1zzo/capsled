@@ -1,0 +1,11 @@
+[Unit]
+Description=Capsled, virtual caps lock led
+
+[Service]
+Type=oneshot
+ExecStart=/bin/capsled
+ExecStop=/bin/sh -c "killall capsled"
+RemainAfterExit=yes
+
+[Install]
+WantedBy=multi-user.target
