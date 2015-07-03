@@ -1,6 +1,7 @@
 CC=gcc -std=c99
 UNAME_V := $(shell uname -v)
 OUTFILE=capsled
+CCFLAGS=-D _GNU_SOURCE
 
 ifeq ($(findstring Ubuntu,$(UNAME_V)),Ubuntu)
 	CCFLAGS += -D TARGET_UBUNTU
